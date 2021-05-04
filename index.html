@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>El viajero y sus gemas</title>
+        <meta http-equiv="X-UA-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimun-scale=1.0">
+        <script src="https://kit.fontawesome.com/42d5bb51ce.js" crossorigin="anonymous"></script>
+        <link rel="icon" type="image/x-icon" href="img/5.svg"/>
+        <link rel="stylesheet" href="estil.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+        <link rel="stylesheet" type="text/css" href="lightbox.min.css"> 
+        <script src="lightbox-plus-jquery.min.js"></script>
+        <style>
+            .swiper-container {
+                
+                top: 150px;
+               width: 100%;
+               padding-top: 120px;
+               padding-bottom: 50px;
+            }
+            .swiper-slide {
+               background-position: center;
+               background-size: cover;
+               width: 300px;
+               height: 300px;
+            
+            }
+            img
+            {
+               width: 100%;
+               -webkit-box-reflect: below 1px linear-gradient(transparent,transparent, #0005);
+            }
+            .id
+            {
+               color: #fff;
+               font-size: 20px;
+            }
+        </style>
+    </head>
+
+    <body>
+         <!-- MENU -->
+        
+         <header class="header">
+            <div class="container-menu">
+                <div class="row align-items-center justify-content-between">
+                   <div class="logo">
+                     <a href="#"><img src="img/prueba-2.png" width="50%" ></a>
+                   </div>
+                   <input type="checkbox" id="nav-check">
+                   <label for="nav-check" class="nav-toggler">
+                      <span></span>
+                   </label>
+                   <nav class="nav">
+                      <ul>
+                         <li><a href="#" class="active">Inicio</a></li>
+                         <li><a href="#spot">Audiovisuales</a></li>
+                         <li><a href="#story">Storyboard</a></li>
+                         <li><a href="#personajes">Personajes</a></li>
+                         <li><a href="#descarga">Descargas</a></li>
+                         <li><a href="#contactanos">Contactanos</a></li>
+                      </ul>
+                   </nav>
+                </div>
+            </div>
+         </header>
+
+        <!-- ESPIRAL DE FONDO-->
+        <header>
+            <div class="container1">
+                <div class="row">
+                    <div class="col">
+                        <div class="feature-img">
+                            <img src="img/video-presentacion.jpg" width="100%">
+                            <img src="img/playvideo.png" class="play-btn" onclick="playVideo('img/pitch.mp4')">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="small-img-row">
+                            <div class="small-img">
+                                <img src="img/andipho.jpg">
+                                <img src="img/playvideo.png" class="play-btn" onclick="playVideo('img/intro-andipho.mp4')">
+                            </div>
+                            <p>Animación de logo #1</p>
+                        </div>
+                        <div class="small-img-row">
+                            <div class="small-img">
+                                <img src="img/animacion-2.jpg">
+                                <img src="img/playvideo.png" class="play-btn" onclick="playVideo('img/logo-2.mp4')">
+                            </div>
+                            <p>Animación de logo #2</p>
+                        </div>
+                        <div class="small-img-row">
+                            <div class="small-img">
+                                <img src="img/derecha1.jpg">
+                                <img src="img/playvideo.png" class="play-btn" onclick="playVideo('img/logo-2.mp4')">
+                            </div>
+                            <p>Animación de logo #3</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="video-player" id="videoPlayer">
+                <video width="95%" controls autoplay id="myVideo">
+                    <source src="img/video.mp4" type="video/mp4">
+                </video>
+                <img src="img/cerrado.png" class="cerrado-btn" onclick="stopVideo()">
+            </div>
+
+            <script>
+                var videoPlayer = document.getElementById("videoPlayer");
+                var myVideo = document.getElementById("myVideo");
+
+                function stopVideo() {
+                    videoPlayer.style.display = "none";
+                }
+
+                function playVideo(file) {
+                    myVideo.src = file;
+                    videoPlayer.style.display = "block"
+                }
+            </script>
+        </header>
+       
+
+         <!-- SPOT-->            
+         <section id="spot">
+            <h5>Spot</h5>
+            <div class="banner">
+                <video src="img/spot.mp4" muted autoplay loop type="mp4"></video>
+                <div class="textBox">
+                    <h2>SINOPSIS</h2>
+                    <p>una vez creí que la historia solo era un pasado aburrido. 
+                    pero ahora que la he vivido creo que ha sido mejor. ¿quieres
+                    saber cómo lo sé? puedes Acompáñame en esta aventura para poder
+                    encontrar las gemas que nos hacen falta a través de las diferentes
+                    épocas de la humanidad, vivamos y descubramos juntos la historia.</p>
+                    <a href="https://www.youtube.com/watch?v=LTESaDCXfME" target="_blank">Read More</a>
+                </div>
+                <div class="videBx">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/LTESaDCXfME" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRAILER-->            
+        <section id="trailer">
+            <h5>Trailer</h5>
+            <div class="banner">
+                <video src="img/el-viajero-y-sus-gemas-trailer-serie-animada-proceso-2 (1).mp4" muted autoplay loop type="mp4"></video>
+                <div class="textBox">
+                    <h2>Capitulo uno</h2>
+                    <p>Axel encuentra a un anciano llamado Froilán el cual está mal herido, el decide
+                    ayudarlo y curas sus heridas sin ningún interés, el anciano al despertar decide
+                    cederle la misión que estaba realizando que consiste en recoger unas gemas a través
+                    del tiempo en diferentes hechos históricos importantes de la humanidad. Estas gemas
+                    se usarán como combustible para una máquina que regenera la capa de ozono, Axel 
+                    acepta la misión y con ayuda de un reloj viaja al antiguo Egipto donde se topa con un 
+                    pueblerino llamado Asim. Este le cuenta que el faraón Ramsés se encuentra en guerra 
+                    con los hititas y lo lleva al campamento allí se da cuenta que la gema la tiene el 
+                    faraón en su corona y decide sustituirla por una gema falsa. Ramsés se da cuenta un 
+                    rato después y ve a Axel corriendo, manda a sus soldados que vallan tras él pero más 
+                    adelante se encuentran con el ejército hitita quedando Axel en medio de ambos ejércitos,
+                    pero escapando con éxito en el último segundo, volviendo a su tiempo original y con la 
+                    gema en sus manos.</p>
+                    <a href="https://www.youtube.com/watch?v=KSSweq73_MI" target="_blank">Read More</a>
+                </div>
+                <div class="videBx">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/KSSweq73_MI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section class="galeria" id="story">
+            <h1>STORYBOARD</h1>
+            <div class="contenedor">
+                <article class="galeria__columna">
+                    <a href="imgs/1.png" data-lightbox="mygallery"><img src="imgs/1.png"></a>
+                </article>
+                
+                <article class="galeria__columna">
+                    <a href="imgs/2.png" data-lightbox="mygallery"><img src="imgs/2.png"></a>
+                </article>
+                
+                <article class="galeria__columna">
+                    <a href="imgs/3.png" data-lightbox="mygallery"><img src="imgs/3.png"></a>
+                </article>
+                
+                <article class="galeria__columna">
+                    <a href="imgs/4.png" data-lightbox="mygallery"><img src="imgs/4.png"></a>
+                </article>
+                
+                <article class="galeria__columna">
+                    <a href="imgs/5.png" data-lightbox="mygallery"><img src="imgs/5.png"></a>
+                </article>
+                
+                <article class="galeria__columna">
+                    <a href="imgs/6.png" data-lightbox="mygallery"><img src="imgs/6.png"></a>
+                </article>
+                
+                <article class="galeria__columna">
+                    <a href="imgs/7.png" data-lightbox="mygallery"><img src="imgs/7.png"></a>
+                </article>
+                
+                <article class="galeria__columna">
+                    <a href="imgs/8.png" data-lightbox="mygallery"><img src="imgs/8.png"></a>
+                </article>
+                
+                <article class="galeria__columna">
+                    <a href="imgs/9.png" data-lightbox="mygallery"><img src="imgs/9.png"></a>
+                </article>
+                
+                <article class="galeria__columna">
+                    <a href="imgs/10.png" data-lightbox="mygallery"><img src="imgs/10.png"></a>
+                </article>
+                
+                <article class="galeria__columna">
+                    <a href="imgs/11.png" data-lightbox="mygallery"><img src="imgs/11.png"></a>
+                </article>
+                
+                <article class="galeria__columna">
+                    <a href="imgs/12.png" data-lightbox="mygallery"><img src="imgs/12.png"></a>
+                </article>
+            
+                <article class="galeria__columna">
+                    <a href="imgs/13.png" data-lightbox="mygallery"><img src="imgs/13.png"></a>
+                </article>
+        
+                <article class="galeria__columna">
+                    <a href="imgs/14.png" data-lightbox="mygallery"><img src="imgs/14.png"></a>
+                </article>
+        
+                <article class="galeria__columna">
+                    <a href="imgs/15.png" data-lightbox="mygallery"><img src="imgs/15.png"></a>
+                </article>
+        
+                <article class="galeria__columna">
+                    <a href="imgs/16.png" data-lightbox="mygallery"><img src="imgs/16.png"></a>
+                </article>
+        
+                <article class="galeria__columna">
+                    <a href="imgs/17.png" data-lightbox="mygallery"><img src="imgs/17.png"></a>
+                </article>
+        
+                <article class="galeria__columna">
+                    <a href="imgs/18.png" data-lightbox="mygallery"><img src="imgs/18.png"></a>
+                </article>
+        
+                <article class="galeria__columna">
+                    <a href="imgs/19.png" data-lightbox="mygallery"><img src="imgs/19.png"></a>
+                </article>
+            </div>
+        </section>
+
+        <!-- PERSONAJES-->
+        <section id="personajes">
+            <h6 >Personajes</h6>
+            <div class="container">
+                <div class="card">
+                    <div class="content">
+                        <h3>AXEL</h3>
+                        <p><img src="img/axel.jpg"></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="content">
+                        <h3>FROILAN</h3>
+                        <p><img src="img/froilanok.jpg" ></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="content">
+                        <h3>RAMSES</h3>
+                        <p><img src="img/ramses.jpg"></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="content">
+                        <h3>ASIM</h3>
+                        <p><img src="img/asim.jpg"></p>
+                    </div>
+                </div>
+                    </div>
+        </section>
+        <!-- DESCARGAS-->
+        <section class="descargas" id="descarga">
+            <h2>Descargas</h2>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/posteruno.jpg">
+                        <a href="img/posteruno.jpg" download="">DESCARGAR
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </a>
+                    </div>
+                    <div class="swiper-slide"><img src="img/posterdoos.jpg">
+                        <a href="img/posterdoos.jpg" download="">DESCARGAR 
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </a>
+                    </div>
+                    <div class="swiper-slide"><img src="img/postertrees.jpg">
+                        <a href="img/postertrees.jpg" download="">DESCARGAR
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </a>
+                    </div>
+                    <div class="swiper-slide"><img src="img/postercuatroo.jpg">
+                        <a href="img/postercuatroo.jpg" download="">DESCARGAR 
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </a>
+                    </div>
+                    <div class="swiper-slide"><img src="img/postercincoo.jpg">
+                        <a href="img/postercincoo.jpg" download="">DESCARGAR 
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </a>
+                    </div>
+                    <div class="swiper-slide"><img src="img/posterseiis.jpg">
+                        <a href="img/posterseiis.jpg" download="">DESCARGAR 
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </a>
+                    </div>
+                    <div class="swiper-slide"><img src="img/postersietee.jpg">
+                        <a href="img/postersietee.jpg" download="">DESCARGAR 
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </a>
+                    </div>
+                    <div class="swiper-slide"><img src="img/posterocho.jpg">
+                        <a href="img/posterocho.jpg" download="">DESCARGAR 
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </a>
+                    </div>
+                </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next id"></div>
+                    <div class="swiper-button-prev id"></div>
+            </div>
+        </section>
+                    
+        </section>
+        <!-- CONTACTANOS -->
+        <section class="section2" id="contactanos">
+            <h4>Contactanos</h4>       
+            <div class="container">            
+                <div class="Card">
+                    <div class="content">
+                        <div class="imgBx"><img src="img/FOTO JUAN.jpg"></div>
+                        <div class="content8x"> 
+                            <h3>Juan Felipe Garcia Salamanca<br><span>Productor Multimedia/Animador</span></h3>
+                        </div>
+                    </div>
+                    <ul class="sci">
+                        <li style="--i:1">
+                            <a href="https://www.facebook.com/juanfelipe.garciasalamanca" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li style="--i:2">
+                            <a href="https://twitter.com/Gs12z" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></i>
+                            </a>
+                        </li>
+                        <li style="--i:3">
+                            <a href="https://www.instagram.com/jgarcia_12_/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="Card">
+                    <div class="content">
+                        <div class="imgBx"><img src="img/FOTO MANUEL.jpg"></div>
+                        <div class="content8x"> 
+                            <h3>Manuel Fernando Rios<br><span>Productor Multimedia/Marketing</span></h3>
+                        </div>
+                    </div>
+                    <ul class="sci">
+                        <li style="--i:1">
+                            <a href="https://www.facebook.com/manuel.f.vanegas" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li style="--i:3">
+                            <a href="https://www.instagram.com/manuel_pj_r/?show_story_unavailable=1" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="Card">
+                    <div class="content">
+                        <div class="imgBx"><img src="img/FOTO MIGUEL.jpg"></div>
+                        <div class="content8x"> 
+                            <h3>Miguel Anguel Montañez Amaya<br><span>Productor Multimedia/Diseñador Web</span></h3>
+                        </div>
+                    </div>
+                    <ul class="sci">
+                        <li style="--i:1">
+                            <a href="https://www.facebook.com/miigue.pte/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li style="--i:2">
+                            <a href="https://twitter.com/miiguelangel197" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li style="--i:3">
+                            <a href="https://www.instagram.com/productor_multimedia97/?hl=es" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="Card">
+                    <div class="content">
+                        <div class="imgBx"><img src="img/FOTO SEBAS.jpg"></div>
+                        <div class="content8x"> 
+                            <h3>Sebastian Pinedo<br><span>Productor Multimedia</span></h3>
+                        </div>
+                    </div>
+                    <ul class="sci">
+                        <li style="--i:1">
+                            <a href="https://www.facebook.com/sebastian.pinedo.9" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li style="--i:3">
+                            <a href="https://www.instagram.com/sebastian_pinedo/?hl=es" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="Card">
+                    <div class="content">
+                        <div class="imgBx"><img src="img/FOTO WILSON.jpg"></div>
+                        <div class="content8x"> 
+                            <h3>Wilson Eduardo Bonilla<br><span>Productor Multimedia/</span></h3>
+                        </div>
+                    </div>
+                    <ul class="sci">
+                        <li style="--i:1">
+                            <a href="https://www.facebook.com/wilson.bonillamondragon" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li style="--i:3">
+                            <a href="https://www.instagram.com/by_cain/?hl=es" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- REDES SOCIALES -->
+        <footer>
+            <div class="footer-content">
+                <h3>Acerca de nosotros</h3>
+                <p>EL viajero y sus gemas es una producción animada con temática educativa en el que se cuentan
+                    hechos históricos importantes de la humanidad de una forma divertida para el agrado de los 
+                    jóvenes con distintos personajes de distintas personalidades.</p>
+                <ul class="socials">
+                    <li><a href="https://www.facebook.com/El-Viajero-y-Sus-Gemas-108304424701916/" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://www.instagram.com/elviajeroysusgemas/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://api.whatsapp.com/send?phone=573223648452&text=Hola%20buen dia,%20requiero de tus servicios por favor " target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a></li>
+                    <li><a href="mailto:elviajeroysusgemas@gmail.com?Subject=Necesito%20una%20acesoria%20por favor%20contáctame" target="_blank" class="gmail"><i class="far fa-envelope"></i></a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>copyright &copy;2021 El Viajero y Sus Gemas</p>
+            </div>
+        </footer>
+        <!-- MENU -->
+        
+        <!-- SCRIPTS DE TODA LA PAGINA -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+        <script src="turn.js"></script>
+                    
+        <script>$('#album').turn({gradients: true, acceleration: true});</script>   
+                    
+        <script type="text/javascript" src="vanilla-tilt.js"></script>
+                
+        <script>VanillaTilt.init(document.querySelectorAll(".card"),{
+            max: 25,
+            speed: 400,
+            glare:true,
+            "max-glare": 1,
+            });
+        </script>
+
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        
+        <script>
+            var swiper = new Swiper('.swiper-container', 
+            {
+                effect: 'coverflow',
+                grabCursor: true,
+                centeredSlides: true,
+                slidesPerView: 'auto',
+                coverflowEffect: {
+                rotate: 20,
+                stretch: 0,
+                depth: 200,
+                modifier: 1,
+                slideShadows: true,
+                },
+                loop:true,
+                autoplay: {
+                    delay: 10000,
+                    disableOnInteraction: false,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        </script>
+    </body>
+</html>
